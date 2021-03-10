@@ -1,10 +1,7 @@
-var db = firebase.firestore();
+﻿var db = firebase.firestore();
   var tabla = document.getElementById("tablaDatos");
 
-function buttonClass(){
-  var tabla2 = document.getElementById("tablaOcultar");
-  tables_adddata()
-}
+
 function tables_adddata() {
     var clase = document.getElementById("clase").value;
     db.collection("school_exams")
@@ -24,7 +21,10 @@ function tables_adddata() {
         });
       });
 }
-
+function buttonClass(){
+  var tabla2 = document.getElementById("tablaOcultar");
+  tables_adddata()
+}
  
 function onload1(){
   const valores = window.location.search;
